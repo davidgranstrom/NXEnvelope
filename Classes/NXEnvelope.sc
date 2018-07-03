@@ -31,13 +31,13 @@ NXEnvelope {
         };
     }
 
-    play {
+    play {arg clock;
         if (action.isNil) {
             "No action function specified".throw;
         };
 
         isPaused = false;
-        task.play;
+        task.play(clock);
     }
 
     stop {
